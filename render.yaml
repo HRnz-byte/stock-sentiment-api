@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: reddit-sentiment-api
+    env: python
+    buildCommand: ""
+    startCommand: "python sentiment_tracker.py"
+    envVars:
+      - key: REDDIT_CLIENT_ID
+        fromEnvVar: REDDIT_CLIENT_ID
+      - key: REDDIT_CLIENT_SECRET
+        fromEnvVar: REDDIT_CLIENT_SECRET
